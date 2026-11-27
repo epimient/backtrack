@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101f1d" />
+    <meta name="description" content="backtrack propone semáforos inteligentes y cruces accesibles para la Barranquilla de 2034. Conoce la propuesta y explora su prototipo." />
+    <title>backtrack — Semáforos que dan paso a todos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header" id="inicio">
+      <a class="brand" href="#inicio" aria-label="backtrack, volver al inicio"><img class="brand-logo brand-logo-dark" src="img/logo_backtrack_dark.png" alt="backtrack" /></a>
+      <span class="header-context mono">IngeniaCity <span aria-hidden="true">/</span> Barranquilla 2034</span>
+      <div class="header-controls">
+        <a class="header-action" href="https://baqtrack.vercel.app/" target="_blank" rel="noopener noreferrer">Explorar prototipo</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú"><span class="menu-toggle-text">Menú</span><span class="menu-toggle-lines" aria-hidden="true"><i></i><i></i></span></button>
+      </div>
+    </header>
+    <div class="site-menu" id="site-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+      <div class="menu-content page-pad">
+        <div class="menu-intro"><span class="mono">Explorar backtrack</span><p>Una ciudad en movimiento necesita cruces que sepan responder.</p></div>
+        <nav class="menu-links" aria-label="Navegación principal">
+          <a href="#reto"><span class="menu-index">01</span><span>El reto</span></a>
+          <a href="#solucion"><span class="menu-index">02</span><span>La propuesta</span></a>
+          <a href="#arquitectura"><span class="menu-index">03</span><span>Cómo funciona</span></a>
+          <a href="#prototipo"><span class="menu-index">04</span><span>El prototipo</span></a>
+          <a href="#plan"><span class="menu-index">05</span><span>El plan</span></a>
+          <a href="#equipo"><span class="menu-index">06</span><span>El equipo</span></a>
+        </nav>
+        <div class="menu-aside"><img src="img/dashbard_dark.png" alt="Panel de la simulación de backtrack" /><div><span class="mono">Prototipo interactivo</span><p>Prueba las decisiones de una intersección simulada en la avenida Murillo.</p><a href="https://baqtrack.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir el prototipo <span aria-hidden="true">↗</span></a></div></div>
+        <div class="menu-foot mono"><span>IngeniaCity · QuiJAM 2034</span><span>Corporación Universitaria Americana</span></div>
+      </div>
+    </div>
+
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div><div class="hero-art-caption mono" aria-hidden="true"><span>Simulación de intersección</span><span>Sector Metropolitano / Barranquilla</span></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-grid page-pad">
+          <div class="hero-top mono"><span>IngeniaCity · QuiJAM 2034</span><span>Barranquilla, Colombia</span></div>
+          <div class="hero-copy">
+            <p class="eyebrow light"><span class="signal-line"></span> Movilidad que se adapta</p>
+            <h1 id="hero-title">La ciudad <em>cambia.</em><br />El semáforo<br />también.</h1>
+            <p class="hero-description">backtrack propone una red de semáforos inteligentes para dar prioridad a quienes más lo necesitan y hacer más accesibles los cruces de Barranquilla.</p>
+            <div class="hero-actions"><a class="button button-bright" href="https://baqtrack.vercel.app/" target="_blank" rel="noopener noreferrer">Explorar el prototipo <span aria-hidden="true">↗</span></a><button class="text-button" type="button" data-open-video="main">Ver el proyecto <span class="play-icon" aria-hidden="true">▶</span></button></div>
+          </div>
+          <div class="hero-bottom mono"><span><span class="scroll-mark" aria-hidden="true"></span> Desliza para explorar</span><span>Propuesta de piloto · 2027–2028</span></div>
+        </div>
+      </section>
+
+      <section class="intro section-pad" id="reto" aria-labelledby="reto-title">
+        <div class="section-label mono"><span>El punto de partida</span><span>01 / Contexto</span></div>
+        <div class="intro-main">
+          <h2 id="reto-title" class="display">Más visitantes.<br /><span>Mismo semáforo.</span></h2>
+          <div class="intro-copy"><p>En una ciudad que cambia con cada temporada, los tiempos fijos no distinguen una calle vacía de otra con cola. Una ambulancia, un bus lleno y un carro particular pueden esperar el mismo verde.</p><p>El Mundial 2034 hará más visible ese reto en los accesos al estadio, el aeropuerto, el centro, el Gran Malecón y la zona norte.</p></div>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>314</strong><span>intersecciones semaforizadas en Barranquilla, según la fuente distrital citada en el proyecto</span></div>
+          <div class="fact"><strong>16</strong><span>botoneras accesibles reportadas como instaladas por la Alcaldía hasta abril de 2026</span></div>
+          <div class="fact fact-statement"><span>Una oportunidad para responder al flujo real y dar lugar a todos.</span></div>
+        </div>
+        <p class="source-note">Fuentes citadas en el documento técnico: <a href="https://barranquilla.gov.co/documento/tiempos/?version=1" target="_blank" rel="noopener noreferrer">Alcaldía de Barranquilla</a> y <a href="https://www.eluniversal.com.co/regional/atlantico/2026/04/15/alcaldia-instalo-16-botoneras-en-lugares-estrategicos-de-barranquilla/" target="_blank" rel="noopener noreferrer">El Universal, abril de 2026</a>.</p>
+      </section>
+
+      <section class="manifesto section-pad" id="solucion" aria-labelledby="solucion-title">
+        <div class="section-label mono"><span>La propuesta</span><span>02 / Sistema</span></div>
+        <div class="manifesto-layout">
+          <div><p class="eyebrow">Una red por sectores</p><h2 id="solucion-title" class="display">Semáforos que<br /><span>ven el tráfico.</span><br />Y dan paso<br />con criterio.</h2></div>
+          <div class="manifesto-side"><p>Las cámaras observan la calzada y un equipo local cuenta vehículos por tipo. Una central recibe esos conteos y coordina los tiempos de los cruces de cada sector. El controlador aplica los cambios con reglas de seguridad.</p><a class="inline-link" href="#arquitectura">Conoce cómo funciona <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <div class="priority-panel" aria-label="Prioridades propuestas">
+          <p class="mono priority-label">Prioridad de paso propuesta</p>
+          <div class="priority-tabs" role="tablist" aria-label="Tipo de prioridad">
+            <button role="tab" id="tab-emergencias" aria-controls="panel-prioridad" aria-selected="true" data-priority="emergencias">Emergencias</button>
+            <button role="tab" id="tab-transporte" aria-controls="panel-prioridad" aria-selected="false" data-priority="transporte" tabindex="-1">Transporte masivo</button>
+            <button role="tab" id="tab-peatones" aria-controls="panel-prioridad" aria-selected="false" data-priority="peatones" tabindex="-1">Cruce extendido</button>
+            <button role="tab" id="tab-otros" aria-controls="panel-prioridad" aria-selected="false" data-priority="otros" tabindex="-1">Los demás flujos</button>
+          </div>
+          <div class="priority-content" id="panel-prioridad" role="tabpanel" aria-labelledby="tab-emergencias"><div class="priority-symbol" aria-hidden="true">✳</div><div><span class="mono">Prioridad máxima</span><h3 id="priority-title">La ambulancia pasa primero.</h3><p id="priority-description">La central puede coordinar una ola verde entre intersecciones del sector para facilitar el paso de los servicios de emergencia.</p></div></div>
+        </div>
+      </section>
+
+      <section class="architecture section-pad" id="arquitectura" aria-labelledby="architecture-title">
+        <div class="section-label mono"><span>Del cruce a la central</span><span>03 / Funcionamiento</span></div>
+        <div class="architecture-header"><h2 id="architecture-title" class="display">Una decisión<br />en movimiento.</h2><p>El video se procesa en la intersección. Hacia la central viajan conteos, no imágenes ni placas.</p></div>
+        <div class="flow" aria-label="Flujo técnico del sistema">
+          <div class="flow-item"><span class="flow-icon">◉</span><h3>Detectar</h3><p>Cuatro cámaras y cuatro Raspberry Pi cuentan vehículos por tipo en cada acceso.</p></div>
+          <div class="flow-item"><span class="flow-icon">⇢</span><h3>Conectar</h3><p>Un switch y un router 4G/5G envían los conteos JSON por MQTT.</p></div>
+          <div class="flow-item"><span class="flow-icon">✦</span><h3>Decidir</h3><p>La central calcula nuevos tiempos según las colas y las prioridades del sector.</p></div>
+          <div class="flow-item"><span class="flow-icon">▥</span><h3>Aplicar</h3><p>El PLC controla las luces y respeta mínimos, máximos y fases de seguridad.</p></div>
+        </div>
+        <div class="architecture-foot"><p><strong>Cuando la conexión cae,</strong> el semáforo conserva su plan, puede volver a ciclo fijo y guarda conteos localmente para sincronizarlos después.</p><a href="img/arquitectura.png" target="_blank" rel="noopener noreferrer">Ver diagrama técnico <span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <section class="human-section" aria-labelledby="human-title"><div class="human-image" aria-hidden="true"></div><div class="human-copy section-pad"><div class="section-label mono"><span>Accesibilidad</span><span>04 / Personas</span></div><p class="eyebrow light">Un cruce para distintas personas</p><h2 id="human-title" class="display">Más tiempo<br />para <span>cruzar.</span></h2><p>La botonera propuesta permite pedir un paso normal o un cruce extendido con una pulsación de tres segundos. Relieve, señal sonora, vibración y pictogramas buscan hacerla más fácil de usar. Su diseño se validaría con asociaciones de personas con discapacidad.</p></div></section>
+
+      <section class="prototype section-pad" id="prototipo" aria-labelledby="prototype-title"><div class="section-label mono"><span>En acción</span><span>05 / Prototipo</span></div><div class="prototype-top"><h2 id="prototype-title" class="display">No solo<br />imaginarlo.<br /><span>Explorarlo.</span></h2><div><p>La simulación muestra la llegada de vehículos, el paso prioritario de una ambulancia y una solicitud de cruce accesible en una intersección del sector de la avenida Murillo.</p><a class="button button-dark" href="https://baqtrack.vercel.app/" target="_blank" rel="noopener noreferrer">Explorar el prototipo <span aria-hidden="true">↗</span></a></div></div><button class="prototype-visual" type="button" data-open-video="prototype" aria-label="Reproducir video del prototipo"><img src="img/dashbard_dark.png" alt="Panel del prototipo backtrack con el cruce de la avenida Murillo y controles de tráfico" loading="lazy" /><span class="visual-play" aria-hidden="true">▶</span><span class="visual-caption mono">Ver simulación · 30 s</span></button><p class="prototype-note">El prototipo muestra la lógica propuesta en una simulación; todavía no representa una instalación en vía pública.</p></section>
+
+      <section class="energy section-pad" aria-labelledby="energy-title"><div class="section-label mono"><span>Energía y continuidad</span><span>06 / Resiliencia</span></div><div class="energy-layout"><div><p class="eyebrow light">Pensado para Barranquilla</p><h2 id="energy-title" class="display">Energía para<br /><span>seguir adelante.</span></h2><p>El diseño preliminar calcula un consumo de unos 97 W por intersección. Dos paneles solares de 450 Wp cubren parte de esa demanda; una versión con batería de 7 kWh busca mantener el cruce activo durante cortes de energía.</p></div><div class="energy-specs"><div><strong>900 <small>Wp</small></strong><span>dos paneles solares por intersección</span></div><div><strong>97 <small>W</small></strong><span>consumo estimado de equipos y semáforos</span></div><div><strong>7 <small>kWh</small></strong><span>batería opcional en la versión B</span></div></div></div><p class="estimate-note">Cifras preliminares del equipo sujetas a ingeniería de detalle y cotizaciones.</p></section>
+
+      <section class="plan section-pad" id="plan" aria-labelledby="plan-title"><div class="section-label mono"><span>Hoja de ruta</span><span>07 / Escala</span></div><div class="plan-top"><h2 id="plan-title" class="display">Empezar en seis.<br /><span>Pensar en toda<br />la ciudad.</span></h2><p>El piloto mediría la reducción del tiempo de espera frente a un semáforo de tiempo fijo antes de ampliar la red a otras zonas.</p></div><div class="phase-list"><article class="phase"><div class="phase-number mono">Piloto · 2027–2028</div><div><h3>Metropolitano</h3><p>Accesos al estadio, Calle 45 y vías de llegada. Incluye la central única.</p></div><strong>6 <small>intersecciones</small></strong></article><article class="phase"><div class="phase-number mono">Mundial · 2029–2033</div><div><h3>Zonas concurridas</h3><p>Corredor del aeropuerto, centro histórico, Gran Malecón y norte.</p></div><strong>28 <small>intersecciones</small></strong></article><article class="phase"><div class="phase-number mono">Ciudad · desde 2035</div><div><h3>Resto de Barranquilla</h3><p>Extensión referencial después del Mundial, sujeta a validación técnica.</p></div><strong>280 <small>intersecciones</small></strong></article></div><div class="investment"><p>Inversión estimada para las fases 1 y 2, con 10 % de contingencia</p><strong>COP 1.511–1.885 M</strong><span>34 intersecciones · sin / con batería</span></div></section>
+
+      <section class="team section-pad" id="equipo" aria-labelledby="team-title"><div class="section-label mono"><span>IngeniaCity</span><span>08 / Equipo</span></div><div class="team-head"><h2 id="team-title" class="display">Las personas<br /><span>detrás de la idea.</span></h2><p>Un equipo de la Corporación Universitaria Americana que reúne tecnología, estrategia, inteligencia artificial, software y seguridad operacional.</p></div><div class="team-grid"><article><img src="img/luis_barbosa.jpg" alt="Retrato de Luis Barbosa" loading="lazy" /><h3>Luis Barbosa</h3><p>Director tecnológico</p></article><article><img src="img/juan_gomez.jpg" alt="Retrato de Juan Gómez" loading="lazy" /><h3>Juan Gómez</h3><p>Director de estrategia y desarrollo de negocio</p></article><article><img src="img/luis_nuñez.jpg" alt="Retrato de Luis Núñez" loading="lazy" /><h3>Luis Núñez</h3><p>Director de inteligencia artificial</p></article><article><img src="img/jose_nieto.jpg" alt="Retrato de José Nieto" loading="lazy" /><h3>José Nieto</h3><p>Líder de desarrollo de software</p></article><article><img src="img/melissa_benitez.jpg" alt="Retrato de Melissa Benítez" loading="lazy" /><h3>Melissa Benítez</h3><p>Líder de seguridad operacional y gestión de riesgo</p></article></div></section>
+
+      <section class="closing section-pad" aria-labelledby="closing-title"><div class="closing-orbit" aria-hidden="true"></div><p class="eyebrow light">El siguiente paso</p><h2 id="closing-title" class="display">Pongamos la ciudad<br /><span>en movimiento.</span></h2><p>Un piloto de seis intersecciones para medir, aprender y ajustar la movilidad de Barranquilla con datos y participación ciudadana.</p><a class="button button-bright" href="https://baqtrack.vercel.app/" target="_blank" rel="noopener noreferrer">Explorar el prototipo <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="#inicio"><img class="brand-logo brand-logo-dark" src="img/logo_backtrack_dark.png" alt="backtrack" /></a><p>IngeniaCity · QuiJAM 2034<br />Barranquilla, Colombia</p><div><a href="#prototipo">Ver simulación</a><a href="#inicio">Volver arriba ↑</a></div><div class="footer-sponsor"><span class="mono">Patrocinador</span><img src="img/logo-americana-patrocinador.png" alt="Corporación Universitaria Americana" loading="lazy" /></div></footer>
+
+    <dialog class="video-dialog" id="video-dialog" aria-label="Video del proyecto"><button class="dialog-close" type="button" aria-label="Cerrar video">Cerrar ×</button><video controls playsinline preload="none"></video></dialog>
+    <script src="script.js" defer></script>
+  </body>
+</html>
